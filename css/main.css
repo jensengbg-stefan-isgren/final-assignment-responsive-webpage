@@ -62,7 +62,8 @@ a:visited {
   transform: scale(1.1);
 }
 
-.primary-btn {
+.primary-btn,
+.info__btn {
   margin: 1.5rem 0;
   font-size: 1rem;
   text-decoration: none;
@@ -74,20 +75,22 @@ a:visited {
   transition-delay: 100ms
 }
 
-.primary-btn:hover {
+.primary-btn:hover,
+.info__btn:hover,
+.subscribe__btn:hover {
   transform: scale(1.1);
 }
 /* end of buttons */
 
 /* start of typography */
-.page-title {
+.about__title {
   color: white;
   font-family: var(--title-font);
   font-size: 6rem;
   text-align: center;
 }
 
-.sub-title {
+.header__info__sub__title {
   font-family: var(--body-font);
   font-weight: bold;
   font-size: 2rem;
@@ -95,11 +98,20 @@ a:visited {
   color: white;
 }
 
-.title.page-title {
-  font-size: 6rem;
+.header__info__title {
+  font-size: 5rem;
+  font-family: var(--title-font);
+  color: white;
 }
 
-.title {
+.title,
+.info__title,
+.card__title,
+.social__title,
+.user__title,
+.join__title,
+.subscribe__title,
+.company__title {
   font-family: var(--title-font);
   font-size: 1.9rem;
 }
@@ -181,13 +193,13 @@ input[type="checkbox"]:checked ~ .overlay {
 /* end of navigation */
 
 /* start of header section */
-.main-header {
+.hero {
   grid-area: header;
   height: 100vh;
   width: 100%;
 }
 
-.main-header::before {
+.hero::before {
   content: '';
   background: url(/img/bg.jpg) center center/cover no-repeat fixed;
   height: 100vh;
@@ -197,7 +209,7 @@ input[type="checkbox"]:checked ~ .overlay {
   opacity: .7;
 }
 
-.header-info {
+.header__info {
   height: 100vh;
   text-align: center;
   width: 80%;
@@ -215,13 +227,13 @@ input[type="checkbox"]:checked ~ .overlay {
 /* end of header section */
 
 /* start of main section */
-.main-section {
+.main {
   grid-area: main;
 }
 /* end of main secction */
 
 /* start of info section */
-.info-section {
+.info {
   display: grid;
   grid-gap: 4rem;
   grid-template-columns: 1fr;
@@ -230,14 +242,14 @@ input[type="checkbox"]:checked ~ .overlay {
   margin: 4rem auto;
 }
 
-.info-box {
+.info__article {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
-.info-img {
+.info__img {
   box-shadow: var(--box-shadow);
   border: var(--border);
   border-radius: 50%;
@@ -266,13 +278,13 @@ input[type="checkbox"]:checked ~ .overlay {
   align-items: center;
 }
 
-.card > i {
+.card__icon {
   font-size: 3rem;
 }
 /* end of card section */
 
 /* start of social media section */
-.social-media {
+.social {
   width: 80%;
   margin: 5rem auto;
   display: grid;
@@ -282,25 +294,20 @@ input[type="checkbox"]:checked ~ .overlay {
   align-items: center;
 }
 
-.social-media img {
-  width: 100%;
-  box-shadow: var(--box-shadow);
-  margin: 1rem 0;
-}
-
-.social-media i {
-  font-size: 3rem;
-}
-
-.social-icons {
+.social__icons {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
+.social__icon {
+  font-size: 3rem;
+}
+
 /* end of social media section */
 
 /* start of review section */
-.user-reviews {
+.user {
   display: grid;
   grid-template-columns: 80%;
   justify-content: center;
@@ -314,13 +321,13 @@ input[type="checkbox"]:checked ~ .overlay {
   font-style: italic;
 }
 
-.user-reviews {
+.user {
   padding: 2rem 0;
 }
  /* end of review section */
 
 /* start of join team section */
-.join-team {
+.join {
   width: 80%;
   margin:auto;
   align-items: center;
@@ -331,7 +338,7 @@ input[type="checkbox"]:checked ~ .overlay {
   text-align: center;
 }
 
-.join-team img {
+.card__image {
   max-height: 125px;
 }
 /* end of join team section */
@@ -348,19 +355,19 @@ input[type="checkbox"]:checked ~ .overlay {
   background-color: rgba(211, 211, 211,.3);
 }
 
-input[type="email"] {
+.subscribe__email {
   width: 80%;
   border: .1rem solid lightgrey;
   height: 2rem;
   margin-bottom: 1rem;
 }
 
-input::placeholder {
+.subscribe__email::placeholder {
   font-family: var(--body-font);
   padding: 0 .5rem;
 }
 
-input[type="submit"] {
+.subscribe__btn {
   padding: .6rem 1.2rem;
   border: .1rem solid darkgrey;
   font-family: var(--body-font);
@@ -370,7 +377,7 @@ input[type="submit"] {
 /* end of subscribe section */
 
 /* start of footer section */
-.footer-section {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -379,15 +386,12 @@ input[type="submit"] {
   grid-area:footer;  
 }
 
-.footer-section > p {
-  margin: 1rem;
-}
 /* end of footer section */
 
 /* start of about page */
 
 /* start of about header */
-.about-header {
+.about__header {
   grid-area: about-header;
   min-height: 20rem;
   background-color: black;
@@ -402,7 +406,7 @@ input[type="submit"] {
 /* end of about header */
 
 /* start of history section */
-.history__section {
+.history {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -415,12 +419,12 @@ input[type="submit"] {
   background-position: center;
 }
 
-.history__section figure {
+.history figure {
   margin: 0;
   padding: 0;
 }
 
-.history__section article {
+.history__article {
   background-color: rgba(211, 211, 211,.3);
   display: flex;
   flex-direction: column;
@@ -435,7 +439,7 @@ input[type="submit"] {
 /* end of history section */
 
 /* start of company section */
-.company-list {
+.company {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -444,13 +448,13 @@ input[type="submit"] {
   margin: 5rem auto;
 }
 
-.company-list li {
+.company__list_item {
   margin: 2rem;
   font-size: 1.5rem;
   font-family: var(--body-font);
 }
 
-.company-list h2 {
+.company__title {
   border-bottom: 2px solid #fda595;
 }
 
@@ -459,7 +463,7 @@ input[type="submit"] {
   margin-bottom: 2rem;
 }
 
-.company-list i {
+.company__checkbox {
   margin-right: 1.2rem;
 }
 /* end of company section */
@@ -471,7 +475,11 @@ input[type="submit"] {
     display: inline 
   }
 
-  .info-section {
+  .header__info {
+    width: 90%;
+  }
+
+  .info {
     display: grid;
     width: 90%;
     grid-gap: 10rem;
@@ -487,26 +495,26 @@ input[type="submit"] {
     justify-content: center;
   }
   
-  .join-team {
+  .join {
     width: 90%;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto auto;
   }
-  .join-team h2 {
+  .join h2 {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
   }
-  .join-team p {
+  .join p {
     padding: 0 3rem;
   }
-  input[type="email"] {
+  .subscribe__email {
     width: 40%;
   }
-  .history__section {
+  .history {
     grid-template-columns: repeat(3,1fr);
   }
 }
 /* end of media query for desktop */
 
 
-
+/* media query for join the team section */
