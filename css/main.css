@@ -74,12 +74,12 @@ a:visited {
   box-shadow: 2px 2px 4px 1px rgba(65, 63, 63, 0.23);
   transition-delay: 100ms
 }
-
-.primary-btn:hover,
 .info__btn:hover,
+.primary-btn:hover,
 .subscribe__btn:hover {
   transform: scale(1.1);
 }
+
 /* end of buttons */
 
 /* start of typography */
@@ -281,6 +281,8 @@ input[type="checkbox"]:checked ~ .overlay {
 .card__icon {
   font-size: 3rem;
 }
+
+
 /* end of card section */
 
 /* start of social media section */
@@ -302,8 +304,33 @@ input[type="checkbox"]:checked ~ .overlay {
 
 .social__icon {
   font-size: 3rem;
+  transition-duration: 400ms;
 }
 
+.social__icon:hover {
+  transform: translate(2px,-5px);
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+ 
+.fa-facebook:hover {
+  color: #3b5998;
+}
+
+.fa-instagram:hover {
+  color: #5851db;
+}
+
+.fa-youtube:hover {
+  color: #ff0000;
+}
+
+.fa-snapchat:hover {
+  color: #fffc00;
+}
+  
 /* end of social media section */
 
 /* start of review section */
@@ -340,6 +367,12 @@ input[type="checkbox"]:checked ~ .overlay {
 
 .card__image {
   max-height: 125px;
+  transition-delay: 100ms;
+  transition-duration: 400ms;
+}
+
+.card__image:hover {
+  transform: translateY(-2rem) scale(1.3);
 }
 /* end of join team section */
 
